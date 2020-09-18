@@ -4,7 +4,6 @@ const User = require('../db/models/user')
 const auth = async (req, res, next) => {
     try {
         const token = req.query.auth;
-        console.log(token);
         const user = await getUserFromToken(token)
         if (!user)
         {
