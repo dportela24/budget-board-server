@@ -22,6 +22,10 @@ app.use(walletRouter);
 app.use(incomeRouter);
 app.use(expenseRouter);
 
+app.all('*', function(req, res){
+    res.status(404).send('what???');
+});
+
 // Connect application
 app.listen(port, () => {
     console.log('Wallet server is up on port ' + port);
