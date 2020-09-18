@@ -20,6 +20,7 @@ router.get('/expense', auth, async (req, res) => {
 
         res.send(user.expenses);
     }catch (e) {
+        console.log(e);
         res.status(500).send(e);
     }
 })
@@ -36,6 +37,7 @@ router.post('/expense', auth, async (req, res) => {
 
         res.status(201).send(expense)
     } catch (e) {
+        console.log(e)
         res.status(400).send(e)
     }
 })
@@ -51,7 +53,7 @@ router.delete('/expense/:_id', auth, async (req, res) => {
             return;
         }
 
-        const expense = await Expense.findByIdAndDelete(ObjectId(req.params._id));
+        const expense = await Expense.findByIdAndDelete(expenseId);
         if (!expense) {
             // Entry not found... 200 OK to remove from client list anyway...
             res.send('Expense not found...');
@@ -60,7 +62,7 @@ router.delete('/expense/:_id', auth, async (req, res) => {
 
         res.send(expense);
         
-        user.removeExpense(req.body._id); 
+        user.removeExpense(expenseId); 
         user.save();
 
     } catch (e) {

@@ -53,7 +53,7 @@ router.delete('/income/:_id', auth, async (req, res) => {
             return;
         }
 
-        const income = await Income.findByIdAndDelete(req.params._id);
+        const income = await Income.findByIdAndDelete(incomeId);
         if (!income) {
             // Entry not found... 200 OK to remove from client list anyway...
             res.send('Income not found...');
@@ -62,9 +62,10 @@ router.delete('/income/:_id', auth, async (req, res) => {
         
         res.send(income);
 
-        user.removeIncome(req.body._id);
+        user.removeIncome(incomeId);
         user.save();
     } catch (e) {
+        console.log(e)
         res.status(500).send(e);
     }
 })

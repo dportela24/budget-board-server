@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const User = require('../db/models/user');
-const {auth, isTokenValid} = require('../middleware/auth');
+const {auth} = require('../middleware/auth');
 
 const router = express.Router();
 
