@@ -1,13 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 require('./db/mongoose');
-const cookieParser = require('cookie-parser')
 const userRouter = require('./routers/user')
 const walletRouter = require('./routers/wallet');
 const incomeRouter = require('./routers/income');
 const expenseRouter = require('./routers/expense');
-
-const path = require('path');
 
 const app = express();
 
