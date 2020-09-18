@@ -6,7 +6,6 @@ const incomeRouter = require('./routers/income');
 const expenseRouter = require('./routers/expense');
 
 const app = express();
-app.use(express.json());
 
 // Add response header to deal with CORS
 app.use((req, res, next) => {
@@ -22,6 +21,8 @@ app.use((req, res, next) => {
         next();
     }
 });
+
+app.use(express.json());
 
 // Set routers to use
 app.use(userRouter);
