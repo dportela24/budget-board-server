@@ -1,7 +1,7 @@
 # Budget Board - Server Side
 
 <p align="center">
-  <img src="https://i.imgur.com/NmyvCr4.png" width=75%>
+  <img src="https://i.imgur.com/NmyvCr4.png" width=66%>
 </p>
 
 ## Project Summary
