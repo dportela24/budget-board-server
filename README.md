@@ -13,7 +13,7 @@ The application's client side is available [here](https://github.com/dportela24/
 
 ## Built with
 
-This project was implemented using NodeJs + Express, with authentification performed by JWT Authentification. The database is managed through MongoDB using the Mongoose framework.
+This project was implemented using NodeJs + Express, with authentication  performed by JWT Authentication. The database is managed through MongoDB using the Mongoose framework.
 
 ## Usage
 
