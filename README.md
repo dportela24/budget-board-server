@@ -6,7 +6,7 @@
 
 ## Project Summary
 
-Budget Board Client implements the back-end of Budget Board, a full stack budget management app that allows to manage your daily life incomes and expenses.
+Budget Board Server implements the back-end of Budget Board, a full stack budget management app that allows to manage your daily life incomes and expenses.
 
 The full app is hosted [here](http://budget-board.herokuapp.com), using Heroku cloud plataform.
 The application's client side is available [here](https://github.com/dportela24/budget-board-client).
